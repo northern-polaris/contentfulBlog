@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { BlogpostsRoutingModule } from './blogposts-routing.module';
-import { BlogpostListComponent } from './blogpost-list/blogpost-list.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {BlogpostListComponent} from './blogpost-list/blogpost-list.component';
+import {FlexModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -11,7 +10,8 @@ import { BlogpostListComponent } from './blogpost-list/blogpost-list.component';
   ],
   imports: [
     CommonModule,
-    BlogpostsRoutingModule
+    FlexModule
   ]
 })
-export class BlogpostsModule { }
+export class BlogpostsModule {
+}

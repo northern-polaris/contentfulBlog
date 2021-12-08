@@ -3,8 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {BlogpostListComponent} from "./blogposts/blogpost-list/blogpost-list.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/products', pathMatch: 'full'},
-  {path: 'products', component: BlogpostListComponent},
+  {path: '', redirectTo: '/posts', pathMatch: 'full'},
+  {path: 'posts', component: BlogpostListComponent},
 ];
 
 @NgModule({

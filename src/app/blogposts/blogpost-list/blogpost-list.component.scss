@@ -1,0 +1,84 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+*,
+*::before,
+*::after {
+  //box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+}
+
+.container {
+  margin: auto;
+}
+
+.post-image {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.main-container {
+  margin-top: 62px;
+}
+
+.title {
+  font-family: Circular Std, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 57px;
+  color: #0D2C47;
+  margin-bottom: 34px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+
+.post-author {
+  font-family: Avenir, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 27px;
+  margin-bottom: 20px;
+  color: rgba(13, 44, 72, 0.5);
+}
+
+.post-title{
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 145%;
+  color: #0D2C48;
+}
+
+.button {
+  justify-content: center;
+}
+
+.load-more-btn {
+  width: 300px;
+  margin: 30px auto;
+  display: block;
+  background: #6FD8B2;
+  border-radius: 5px;
+  color: #0F273F;
+  border: none;
+  outline: none;
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 14px;
+}

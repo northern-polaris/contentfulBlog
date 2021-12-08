@@ -12,14 +12,16 @@ export class BlogpostListComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) {
   }
 
-  products: Entry<any>[] = [];
+  posts: Entry<any>[] = [];
 
   ngOnInit() {
-    this.contentfulService.getProducts()
-      .then(products => {
-        this.products = products;
-        console.log(products)
+    this.contentfulService.getPosts()
+      .then(posts => {
+        this.posts = posts;
+        console.log(posts)
       })
   }
 
-}
+  getImageUrl(p: Entry<any>): string {
+    return p.fields.heroImage.fields.file.url
+  }}
