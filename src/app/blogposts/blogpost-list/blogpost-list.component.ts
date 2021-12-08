@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ContentfulService} from "../contentful.service";
+import {Entry} from "contentful";
 
 @Component({
   selector: 'app-blogpost-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogpostListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contentfulService: ContentfulService) {
+  }
 
-  ngOnInit(): void {
+  products: Entry<any>[] = [];
+
+  ngOnInit() {
+    this.contentfulService.getProducts()
+      .then(products => {
+        this.products = products;
+        console.log(products)
+      })
   }
 
 }
