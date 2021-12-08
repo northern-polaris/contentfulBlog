@@ -1,27 +1,10 @@
-<!--<div class="content">-->
-<!--  <div class="posts">-->
-<!--    <ng-container>-->
-<!--      <div *ngFor="let p of posts" class="post">-->
-<!--        <div class="post-image">-->
-<!--          <img [src]="getImageUrl(p)" alt="">-->
-<!--        </div>-->
-<!--        <a [routerLink]="['/posts/', p.sys.id]">-->
-<!--          <div class="post-title">-->
-<!--            {{ p.fields.title }}-->
-<!--          </div>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </ng-container>-->
-<!--  </div>-->
-<!--</div>-->
-
 <div class="main-container">
   <div class="container" fxLayout="row wrap"
        fxLayout.lt-sm="column"
        fxLayoutAlign="space-between stretch" >
     <h2 class="title" fxFlex="100%">Last articles</h2>
 
-    <div class="post" *ngFor="let p of posts">
+    <div class="post" *ngFor="let p of currentLoadedPosts">
       <div fxFlex="30%"
            fxFlex.lt-md="50%"
            fxFlex.lt-sm="100%">
@@ -37,5 +20,7 @@
     </div>
 
   </div>
-
+  <div class="button">
+    <button class="load-more-btn" (click)="load()">Load more</button>
+  </div>
 </div>
