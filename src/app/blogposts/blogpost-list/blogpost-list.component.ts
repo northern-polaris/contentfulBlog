@@ -9,28 +9,25 @@ import {Entry} from "contentful";
 })
 export class BlogpostListComponent implements OnInit {
 
+  posts: Entry<any>[] = [];
+  loadPosts: any[] = [];
+  currentLoadedPosts: Entry<any>[] = [];
+  totalItems = 0;
+
   constructor(private contentfulService: ContentfulService) {
   }
 
-  posts: Entry<any>[] = [];
-
-  loadPosts: any[] = [];
-  currentLoadedPosts: Entry<any>[] = [];
-  contentfulPageSize = 100;
-  currentPageItems = 0;
-
   ngOnInit() {
     this.getPosts();
-
   }
 
   getPosts(queryParam?: object) {
     this.contentfulService.getPosts(queryParam)
-      .then(posts => {
+      .then(res => {
+        const posts = res.items;
         this.posts = posts;
-        console.log(posts)
-        this.currentPageItems = posts.length;
-        this.currentLoadedPosts = posts.slice(0, 3);
+        this.currentLoadedPosts = [...this.currentLoadedPosts, ...posts.slice(0, 3)];
+        this.totalItems = res.total;
       })
   }
 
@@ -40,12 +37,9 @@ export class BlogpostListComponent implements OnInit {
 
   load() {
     const loadedItems = this.currentLoadedPosts.length;
-    if (loadedItems === this.contentfulPageSize + 1) {
+    if (loadedItems < this.totalItems) {
       this.getPosts({skip: loadedItems});
-      window.alert(loadedItems)
-      return
     }
-    this.currentLoadedPosts = [...this.currentLoadedPosts, ...this.posts.slice(loadedItems, loadedItems + 3)]
   }
 
 }

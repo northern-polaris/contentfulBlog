@@ -1,22 +1,20 @@
 <div class="main-container">
   <div class="container" fxLayout="row wrap"
        fxLayout.lt-sm="column"
-       fxLayoutAlign="space-between stretch" >
+       fxLayoutAlign="space-between stretch">
     <h2 class="title" fxFlex="100%">Last articles</h2>
-
-    <div class="post" *ngFor="let p of currentLoadedPosts">
+    <div class="post" *ngFor="let post of currentLoadedPosts">
       <div fxFlex="30%"
            fxFlex.lt-md="50%"
            fxFlex.lt-sm="100%">
         <div class="post-header">
-          <img [src]="getImageUrl(p)" class="post-image" width="600" height="300" alt="post">
+          <img [src]="getImageUrl(post)" class="post-image" width="600" height="300" alt="post">
         </div>
         <div class="post-body">
-          <span class="post-author">by {{p.fields.author.fields.name}} </span>
-          <h4 class="post-title">{{ p.fields.title }}</h4>
+          <span class="post-author">by {{post.fields.author.fields.name}} </span>
+          <h4 class="post-title">{{ post.fields.title }}</h4>
         </div>
       </div>
-
     </div>
 
   </div>
