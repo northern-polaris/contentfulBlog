@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container"  fxFlex.lt-sm="40%">
   <div class="container" fxLayout="row wrap"
        fxLayout.lt-sm="column"
        fxLayoutAlign="space-between stretch">
@@ -6,7 +6,7 @@
     <div class="post" *ngFor="let post of currentLoadedPosts">
       <div fxFlex="30%"
            fxFlex.lt-md="50%"
-           fxFlex.lt-sm="100%">
+           fxFlex.lt-sm="40%">
         <div class="post-header">
           <img [src]="getImageUrl(post)" class="post-image" width="600" height="300" alt="post">
         </div>

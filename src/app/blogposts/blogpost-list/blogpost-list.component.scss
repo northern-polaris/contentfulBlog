@@ -57,7 +57,7 @@ body {
   color: rgba(13, 44, 72, 0.5);
 }
 
-.post-title{
+.post-title {
   font-family: Avenir, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -82,4 +82,15 @@ body {
   padding: 15px 0;
   cursor: pointer;
   font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
 }
+
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 0 90px;
+
+  }
+}
+
