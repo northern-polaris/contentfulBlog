@@ -1,10 +1,10 @@
-//@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
 
 *,
 *::before,
 *::after {
-  //box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .post-author {
-  font-family: Avenir, serif;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -58,12 +58,13 @@ body {
 }
 
 .post-title {
-  font-family: Avenir, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 145%;
   color: #0D2C48;
+
 }
 
 .button {
@@ -71,8 +72,8 @@ body {
 }
 
 .load-more-btn {
-  width: 300px;
-  margin: 30px auto;
+  width: 392px;
+  margin: 50px auto;
   display: block;
   background: #6FD8B2;
   border-radius: 5px;
@@ -84,13 +85,13 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: bold;
+  height: 50px;
 }
 
 
 @media (max-width: 768px) {
   .main-container {
     padding: 0 90px;
-
   }
 }
 
